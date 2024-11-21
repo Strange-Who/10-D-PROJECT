@@ -1,0 +1,204 @@
+/* General body and HTML settings */
+body, html {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, #1e1e2f, #2b2b3e);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Chat container */
+.chat {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card {
+    height: 500px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrolling message area */
+.msg_card_body {
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking */
+}
+
+/* Custom scrollbar styling */
+.msg_card_body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.msg_card_body::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.msg_card_body::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Footer styling for message input */
+.card-footer {
+    border-radius: 0 0 15px 15px;
+    border-top: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Header styling */
+.msg_head {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #f5f6fa;
+}
+
+.user_info {
+    flex: 1;
+    color: #ddd;
+}
+
+.user_info span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user_info p {
+    margin: 0;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Input message box */
+.type_msg {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0;
+    color: white;
+    height: 45px;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.send_btn {
+    background-color: rgba(0, 115, 255, 0.3); /* Slightly transparent blue */
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 45px; /* Matches the height of the button */
+    height: 45px; /* Ensures the button is square */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    padding: 0; /* Remove extra padding */
+    overflow: hidden; /* Prevent any overflow */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.loading-icon {
+    width: 20px; /* Adjust the size of the loading spinner */
+    height: 20px;
+    object-fit: contain;
+}
+
+
+.send_btn img {
+    width: 20px; /* Set the image width */
+    height: 20px; /* Set the image height */
+    object-fit: contain; /* Ensure the image scales correctly */
+}
+
+.send_btn:hover {
+    background-color: rgb(0, 18, 41); /* Darker blue on hover */
+}
+
+
+
+/* Chat bubbles for received messages */
+.msg_cotainer {
+    background-color: #3a8dff;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center; /* Align icon with message */
+    gap: 10px;
+}
+
+.msg_cotainer img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* Chat bubbles for sent messages */
+.msg_cotainer_send {
+    background-color: #4caf50;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center; /* Align icon with message */
+    gap: 10px;
+    flex-direction: row-reverse; /* Icon appears on the right */
+}
+
+.msg_cotainer_send img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* Timestamp styling */
+.msg_time, .msg_time_send {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    display: block;
+    text-align: right;
+}
+
+/* Flexbox layout for sent and received messages */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+/* Adjust chat icons for responsiveness */
+.img_cont_msg img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}

@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111222; /* Consistent background color */
+    color: #fff;
+}
+
+/* Styling for the header */
+header {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding around the header */
+    background-color: #fff; /* Background color (optional) */
+    position: sticky; /* Keeps it at the top of the page */
+    top: 0; /* Position at the very top */
+    z-index: 10; /* Ensures it stays above other content */
+  }
+  
+  /* Styling for the logo */
+  header .logo img {
+    width: 100px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+  }
+  
+  /* Styling for the navbar */
+  header nav {
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Spacing between the navbar items */
+  }
+  
+  header nav a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Neutral text color */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 500; /* Slightly bold for better readability */
+    padding: 5px 10px; /* Padding around links */
+  }
+  
+  header nav a:hover {
+    color: #007bff; /* Highlight color on hover */
+  }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; /* Stack logo and navbar vertically */
+      align-items: center; /* Center content */
+    }
+  
+    header nav {
+      flex-direction: column; /* Stack navbar items */
+      gap: 10px; /* Reduce spacing between links */
+    }
+  
+    header .logo img {
+      width: 60px; /* Smaller logo on small screens */
+    }
+  }
+    
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 100px; /* Extra padding for text */
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+section:not(#home):not(#doctor-gpt) {
+    background-color: #ffffff00; /* Dark consistent background for all other pages */
+    padding: 150px 100px; /* Increased padding for extra space */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 80px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translateY(50px);
+}
+
+.content .text-box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 55px;
+    margin-bottom: 40px;
+}
+
+.info {
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify; /* Adjust text alignment for better readability */
+}
+/* Tips Section Cards */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; /* Ensures the cards align properly without overlap */
+}
+
+.tip-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Initially hide the card content */
+.card-content {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    opacity: 0; /* Fade out content initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Show content when hovering over the card */
+.tip-card:hover .card-content {
+    display: block;
+    opacity: 1; /* Fade content in */
+}
+
+/* Hover effect for the card */
+.tip-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Transition effect for title color */
+}
+
+/* Change card title color when hovered */
+.tip-card:hover .card-title {
+    color: #0ef; /* Change to a brighter color on hover */
+}
+#doctor-gpt, #home, #tips-on-health-care, #faq, #contact {
+    background-image: url('Untitled\ design.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #24252A;
+}
+
+/* Make the navbar background transparent */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background (adjust the alpha value as needed) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Optional: For making the links have a smooth hover effect */
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+nav a:hover {
+    color: #0ef; /* You can adjust this color */
+}
+
+/* Active link styling */
+nav a.active {
+    color: #0ef; /* Change this to whatever color you want for the active link */
+}
+
+/* When navbar is on scroll, you can add styles like shadow to make it look better */
+header.scrolled {
+    background: rgba(0, 0, 0, 0.9); /* Slightly darker when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add styles to make the navbar links stand out on scroll */
+/* Styling the FAQ section */
+#faq {
+    background-color: #24252A; /* Ensure background color is consistent */
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* FAQ Container */
+.faq-card {
+    background-color: rgba(51, 51, 51, 0.92); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit the card's width */
+    text-align: left;
+    cursor: pointer;
+    transform: translateY(50px); /* Start from below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+/* Individual FAQ Cards */
+.faq-card {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit the card's width */
+    text-align: left;
+    cursor: pointer;
+    transform: translateY(50px); /* Start from below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* FAQ Question Styling */
+.faq-card h3.faq-question {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* FAQ Answer Hidden Initially */
+.faq-answer {
+    display: none;
+    font-size: 1.1em;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Display the answer on hover */
+.faq-card:hover .faq-answer {
+    display: block;
+}
+
+.faq-card:hover {
+    transform: translateY(0); /* Move up on hover */
+    opacity: 1; /* Make it visible */
+    background-color: rgba(51, 51, 51, 0.95); /* Slightly less transparent on hover */
+}
+
+/* Optional: Make FAQ cards responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .faq-card {
+        width: 100%;
+    }
+}
+/* Navbar Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background: rgba(0, 0, 0, 0.6); /* Make navbar background semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.9); /* Darker navbar when scrolling */
+}
+
+/* Navbar links styling */
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    border-radius: 500px;
+}
+/* Contact Section */
+#contact {
+    background-color: #1d1f21; /* Background color for contact section */
+    padding: 60px 100px; /* Add padding to make space around the content */
+    color: #fff;
+    text-align: center;
+}
+
+#contact .info {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+#contact a {
+    color: #0ef;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling with Transparent Box */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Optional: apply background blur effect */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 50px; /* Ensure some space at the top */
+    
+    /* Initial state of footer before animation */
+    opacity: 0; 
+    transform: translateY(30px); /* Start below its final position */
+    
+    animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Slight delay before animation starts */
+}
+
+/* Define the Fade-In and Slide-Up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Footer starts lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Footer ends up in its final position */
+    }
+}
+
+/* Footer Credits Styling */
+footer .footer-info {
+    font-size: 1.2em;
+}
+
+/* Color change on hover for footer credits */
+footer .footer-info strong {
+    color: #0ef; /* Highlight developer names with a brighter color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer .footer-info strong:hover {
+    color: #ff9900; /* Change color to orange on hover */
+}
+
+/* Ensure the footer text is well spaced */
+footer p {
+    margin: 5px 0;
+}
+/* FAQ Section */
+#faq {
+    background-color: #333;
+    padding: 60px 100px;
+    color: #fff;
+    text-align: center;
+}
+
+#faq .info {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* FAQ Cards Styling */
+.faq-container {
+    display: flex;
+    flex-direction: column; /* Stack the FAQ cards vertically */
+    gap: 30px; /* Space between cards */
+    align-items: center; /* Center align the cards */
+}
+
+/* FAQ Card */
+.faq-card {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit the card's width */
+    text-align: left;
+    cursor: pointer;
+    transform: translateY(50px); /* Start from below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for FAQ cards */
+.faq-card:hover {
+    transform: translateY(0); /* Move up on hover */
+    opacity: 1; /* Make it visible */
+    background-color: rgba(51, 51, 51, 0.95); /* Slightly less transparent on hover */
+}
+
+/* FAQ Card Header (Question) */
+.faq-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff; /* Initial color for question text */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+/* Change color of question text when hovering over the card */
+.faq-card:hover h3 {
+    color: #0ef; /* Change color to light blue (or any color you prefer) */
+}
+
+/* FAQ Card Text (Answer) */
+.faq-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Ensure the FAQ text is hidden initially */
+.faq-card .answer {
+    display: none;
+}
+
+/* Show the answer when the FAQ card is clicked */
+.faq-card.active .answer {
+    display: block;
+}
+
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the FAQ cards */
+.faq-card {
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s; /* Slight delay before animation starts */
+}
+/* Credits Section */
+#credits {
+    padding: 60px 100px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Credits Container */
+.credits-container {
+    
+    display: flex;
+    flex-direction: column; /* Stack the credit cards vertically */
+    gap: 30px; /* Space between cards */
+    align-items: center; /* Center align the cards */
+}
+
+/* Individual Credit Cards */
+.credits-card {
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit the card's width */
+    text-align: left;
+    cursor: pointer;
+    transform: translateY(50px); /* Start from below */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    
+    
+}
+/* Hover effect for Credits cards */
+.credits-card:hover {
+    transform: translateY(0); /* Move up on hover */
+    opacity: 1; /* Make it visible */
+    background-color: rgba(0, 0, 0, 0.452); /* Slightly more opaque on hover */
+}
+
+/* Credits Title */
+.credits-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #fff; /* Initial color */
+    transition: color 0.3s ease;
+}
+
+/* Change title color on hover */
+.credits-card:hover .credits-title {
+    color: #0ef; /* Change color to light blue */
+}
+
+/* Credits List Styling */
+.credits-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credits-list li {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Change list item color on hover */
+.credits-list li:hover {
+    color: rgb(255, 153, 0);
+}
+
+/* Make credits cards responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .credits-card {
+        width: 100%;
+    }
+}
+
+/* Animation for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the credits cards */
+.credits-card {
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s; /* Slight delay before animation starts */
+}
+body{
+    background-color: transparent;
+}
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+  }
+  /* Healthcare Tips, FAQ, and Credits Card Styling */
+
+/* Base Card Styles */
+.tip-card, .faq-card, .credits-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Add some space between cards */
+}
+
+/* Tip Card Styles (Keep existing styles) */
+.tip-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Initially hide the card content */
+.card-content {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show content when hovering over the card */
+.tip-card:hover .card-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Card Hover Effects */
+.tip-card:hover, 
+.faq-card:hover, 
+.credits-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.card-title, 
+.faq-card h3.faq-question, 
+.credits-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Title Hover Effect */
+.tip-card:hover .card-title,
+.faq-card:hover h3.faq-question,
+.credits-card:hover .credits-title {
+    color: #0ef;
+}
+
+/* FAQ Card Specific Styles */
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.faq-card {
+    position: relative;
+}
+
+/* FAQ Answer Styling */
+.faq-answer {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.faq-card:hover .faq-answer {
+    display: block;
+    opacity: 1;
+}
+
+/* Credits Card Specific Styles */
+.credits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.credits-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.credits-card:hover .credits-list {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tip-card, 
+    .faq-card, 
+    .credits-card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to cards */
+.tip-card, 
+.faq-card, 
+.credits-card {
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* List Item Hover Effects */
+.credits-list li {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.credits-list li:hover {
+    color: #0ef;
+    transform: translateX(5px);
+}

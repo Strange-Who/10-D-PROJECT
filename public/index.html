@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemesis AI</title>
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <style>
+        body, html {
+            overflow-x: hidden;
+        }
+
+        .chat {
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .msg_cotainer, .msg_cotainer_send {
+            display: flex;
+            align-items: flex-start;
+            word-wrap: break-word;
+            max-width: 70%;
+        }
+
+        .msg_cotainer img, .msg_cotainer_send img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .msg_time, .msg_time_send {
+            font-size: 10px;
+            margin-top: 5px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: right;
+            display: block;
+        }
+
+        .msg_cotainer_send {
+            flex-direction: row-reverse;
+            margin-left: auto;
+        }
+
+        .msg_cotainer_send img {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        .send_btn img.loading-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-md-8 col-xl-6 chat">
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img" alt="Chatbot Icon">
+                            </div>
+                            <div class="user_info">
+                                <span>Nemesis AI</span>
+                                <p>Your health. Our technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageContainer" class="card-body msg_card_body"></div>
+                    <div class="card-footer">
+                        <form id="messageForm" class="input-group">
+                            <input type="text" id="userInput" name="msg" placeholder="Type your message..." class="form-control type_msg" required>
+                            <div class="input-group-append">
+                                <!-- Updated send button -->
+                                <button type="submit" class="input-group-text send_btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const md = window.markdownit();
+
+            $("#messageForm").on("submit", function (event) {
+                event.preventDefault();
+
+                const userMessage = $("#userInput").val().trim();
+                if (!userMessage) return;
+
+                const sendButton = $(".send_btn");
+                const originalIcon = sendButton.html(); // Save the original button content (icon)
+
+                // Set loading spinner
+                sendButton.html('<img src="./loader.gif" alt="Loading..." class="loading-icon">');
+                sendButton.prop("disabled", true); // Disable the button
+
+                const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                $("#messageContainer").append(`
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            <img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" alt="User Icon">
+                            <div>${userMessage}</div>
+                            <div><span class="msg_time_send">${time}</span></div>
+                        </div>
+                    </div>
+                `);
+
+                $("#userInput").val('');
+
+                // Send AJAX request
+                $.ajax({
+                    type: "POST",
+                    url: "/get",
+                    data: { msg: userMessage },
+                    success: function (response) {
+                        const botReply = md.render(response.reply || "Sorry, no response available.");
+                        $("#messageContainer").append(`
+                            <div class="d-flex justify-content-start mb-4">
+                                <div class="msg_cotainer">
+                                    <img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" alt="Bot Icon">
+                                    <div>${botReply}</div>
+                                    <span class="msg_time">${time}</span>
+                                </div>
+                            </div>
+                        `);
+                        $("#messageContainer").scrollTop($("#messageContainer")[0].scrollHeight);
+                    },
+                    error: function () {
+                        alert("Error: Unable to connect to the chatbot server.");
+                    },
+                    complete: function () {
+                        // Revert the button back to original content
+                        sendButton.html(originalIcon);
+                        sendButton.prop("disabled", false);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

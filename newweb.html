@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELIOS CARE</title>
+    <link rel="stylesheet" href="newweb.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="logo shi.png" alt="Logo">
+    </a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="http://192.168.8.9:3000/" target="_blank">Helios Bot</a>
+      <a href="#tips-on-health-care">Tips on Health Care</a>
+      <a href="#faq">FAQ</a>
+      <a href="#credits">Credits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <div class="welcome-container">
+            <h1 class="main-title">WELCOME!</h1>
+            <div class="content">
+                <div class="text-box">
+                    <h3>What Is Helios Bot?</h3>
+                    <p class="welcome-text">
+                        Helios Bot is your personalized medical assistant designed to provide helpful information and support. 
+                        Whether you're seeking advice on symptoms, treatments, or general health concerns, Helios Bot offers clear, accurate, 
+                        and accessible responses to guide you on your healthcare journey. Please note, for urgent or complex medical issues, 
+                        always consult a healthcare professional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+
+    <section id="tips-on-health-care">
+        <h2 class="section-title">Tips on Health Care</h2>
+        <div class="info">
+          <div class="tips-container">
+            <!-- Card 1: Stay Hydrated -->
+            <div class="tip-card">
+              <h3 class="card-title">Stay Hydrated</h3>
+              <p class="card-content">
+                Hydration is key to maintaining your overall health and well-being. Your body depends on water to carry out vital functions, such as digestion, circulation, and regulating body temperature. Dehydration can lead to fatigue, headaches, and difficulty concentrating. To maintain optimal hydration levels, it’s recommended to drink at least 8 cups (2 liters) of water daily, and more if you are active or in hot weather. Drinking water regularly throughout the day helps prevent dehydration and keeps your skin healthy and glowing.
+              </p>
+            </div>
+    
+            <!-- Card 2: Exercise Regularly -->
+            <div class="tip-card">
+              <h3 class="card-title">Exercise Regularly</h3>
+              <p class="card-content">
+                Regular physical activity is one of the most important things you can do for your health. Exercise strengthens the heart, increases blood circulation, and boosts your immune system. It can also help regulate weight, improve mood, reduce stress, and enhance sleep quality. Experts recommend at least 150 minutes of moderate aerobic exercise, such as walking or cycling, each week. Additionally, including strength training exercises 2-3 times a week can build muscle mass, improve bone health, and increase metabolism.
+              </p>
+            </div>
+    
+            <!-- Card 3: Eat a Balanced Diet -->
+            <div class="tip-card">
+              <h3 class="card-title">Eat a Balanced Diet</h3>
+              <p class="card-content">
+                A well-balanced diet is crucial for maintaining energy levels and overall health. Your body requires a variety of nutrients to function properly, including vitamins, minerals, protein, healthy fats, and carbohydrates. Aim to fill your plate with a variety of fruits and vegetables, whole grains, lean proteins like chicken or legumes, and healthy fats like those found in avocado or nuts. Eating a diverse range of foods ensures that your body gets all the necessary nutrients for energy, growth, and repair. Avoid excessive processed foods and sugars to maintain optimal health.
+              </p>
+            </div>
+    
+            <!-- Card 4: Get Enough Sleep -->
+            <div class="tip-card">
+              <h3 class="card-title">Get Enough Sleep</h3>
+              <p class="card-content">
+                Sleep is vital for physical and mental health. It helps your body recover, supports brain function, and regulates hormones. Lack of sleep can negatively affect mood, concentration, and immune function. Adults should aim for 7-9 hours of sleep per night for proper rest. Poor sleep habits, such as irregular sleep schedules or excessive screen time before bed, can interfere with sleep quality. To improve your sleep, try creating a relaxing nighttime routine, avoiding caffeine in the evening, and ensuring your sleep environment is dark, quiet, and comfortable.
+              </p>
+            </div>
+    
+            <!-- Card 5: Manage Stress Effectively -->
+            <div class="tip-card">
+              <h3 class="card-title">Manage Stress Effectively</h3>
+              <p class="card-content">
+                Chronic stress can negatively impact your mental and physical health. It can contribute to anxiety, depression, high blood pressure, and other health issues. Managing stress effectively is essential for overall well-being. Practices like mindfulness meditation, deep breathing exercises, and yoga can help calm your mind and reduce stress levels. Regular exercise also helps by releasing endorphins, which are natural mood boosters. Additionally, taking breaks during your day to relax, maintain a healthy work-life balance, and talk to a therapist or loved one can help you manage stress in a positive way.
+              </p>
+            </div>
+    
+    
+      <!-- ScrollReveal Script for Animations -->
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script>
+        // ScrollReveal configuration
+        ScrollReveal().reveal('.tip-card', {
+          distance: '50px',
+          duration: 1000,
+          delay: 300,
+          origin: 'bottom',
+          interval: 200,  // Delay between revealing cards
+          easing: 'ease-in-out',
+        });
+    
+        // Optional: You can also animate titles or section elements
+        ScrollReveal().reveal('.section-title', {
+          delay: 400,
+          origin: 'top',
+          distance: '30px',
+          duration: 800,
+          easing: 'ease-in-out',
+        });
+      </script>      
+      
+
+      </script>    
+        <section id="faq">
+            <h2 class="section-title">FAQ</h2>
+            <div class="faq-container">
+                <!-- FAQ Card 1 -->
+                <div class="faq-card">
+                    <h3 class="faq-question">What is Helios Bot?</h3>
+                    <div class="faq-answer">
+                        <p>Helios Bot is an AI-powered healthcare assistant designed to provide reliable information regarding symptoms, treatments, and medical advice. It assists in guiding individuals through healthcare-related inquiries but should never replace professional medical consultations.</p>
+                    </div>
+                </div>
+        
+                <!-- FAQ Card 2 -->
+                <div class="faq-card">
+                    <h3 class="faq-question">How does Helios Bot work?</h3>
+                    <div class="faq-answer">
+                        <p>Helios Bot uses natural language processing (NLP) and machine learning to understand user queries and provide relevant medical information. It is trained on a large dataset of medical knowledge and continuously updates itself for accuracy and reliability.</p>
+                    </div>
+                </div>
+        
+                <!-- FAQ Card 3 -->
+                <div class="faq-card">
+                    <h3 class="faq-question">Can Helios Bot diagnose diseases?</h3>
+                    <div class="faq-answer">
+                        <p>No, Helios Bot is not designed to diagnose medical conditions. It provides information based on symptoms and general health advice. For any medical diagnosis or emergency, you should always consult a healthcare professional.</p>
+                    </div>
+                </div>
+        
+                <!-- FAQ Card 4 -->
+                <div class="faq-card">
+                    <h3 class="faq-question">Is Helios Bot free to use?</h3>
+                    <div class="faq-answer">
+                        <p>Helios Bot offers free services. The service includes consultations and general advice..</p>
+                    </div>
+                </div>
+        
+                <!-- FAQ Card 5 -->
+                <div class="faq-card">
+                    <h3 class="faq-question">How accurate is the information provided by Helios Bot?</h3>
+                    <div class="faq-answer">
+                        <p>While Helios Bot is trained on a vast amount of medical data, the information provided should be considered general advice. It's important to verify any medical information with a healthcare professional for accuracy and relevance to your specific situation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="credits">
+          <h2 class="section-title">Credits</h2>
+          <div class="credits-container">
+              <!-- Credit Card 1 -->
+              <div class="credits-card">
+                  <h3 class="credits-title">Documentation & Design </h3>
+                  <ul class="credits-list">
+                      <li>Rishikesh</li>
+                      <li>Doniv</li>
+                      <li>Yoonus</li>
+                      <li>Aaqib</li>
+                      <li>Rehan</li>
+                      <li>Amenra</li>
+                      <li>Avantika</li>
+                      <li>Abijah</li>
+                      <li>Manha</li>
+                      <li>Dikshya</li>
+                      <li>Aakarshna</li>
+                      <li>Shua</li>
+
+
+
+
+
+
+
+
+
+                  </ul>
+              </div>
+              <!-- Credit Card 2 -->
+              <div class="credits-card">
+                  <h3 class="credits-title">GROUP-A [ Web-Developing ]</h3>
+                  <ul class="credits-list">
+                      <li>Muhammad Shahal</li>
+                      <li>Mohammad Ziya</li>
+                  </ul>
+              </div>
+              <!-- Credit Card 3 -->
+              <div class="credits-card">
+                  <h3 class="credits-title">GROUP-B [ Practical-Modal ]</h3>
+                  <ul class="credits-list">
+                      <li>Humaira</li>
+                      <li>Krishnendu</li>
+                      <li>Rochelle</li>
+                      <li>Safia</li>
+                      <li>Aliya</li>
+
+                  </ul>
+              </div>
+                            <!-- Credit Card 3 -->
+                            <div class="credits-card">
+                              <h3 class="credits-title"> Leaders </h3>
+                              <ul class="credits-list">
+                                  <li>Sarah</li>
+                                  <li>Hredhaan</li>
+
+            
+          </div>
+      </section>
+              
+      <script>
+      // ScrollReveal configuration for Credits Section
+      ScrollReveal().reveal('.credits-card', {
+          distance: '50px',
+          duration: 1000,
+          delay: 300,
+          origin: 'bottom',
+          interval: 200,
+          easing: 'ease-in-out',
+      });
+  
+      ScrollReveal().reveal('.section-title', {
+          delay: 400,
+          origin: 'top',
+          distance: '30px',
+          duration: 800,
+          easing: 'ease-in-out',
+      });
+      </script>
+  
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="info">
+                <p>If you need assistance or have any inquiries, feel free to reach out to us via the contact details below:</p>
+                <p><strong>Email:</strong> <a href="mailto:muhammadshahal99@gmail.com">muhammadshahal99@gmail.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:mohammedziya110@gmail.com">mohammedziya110@gmail.com</a></p>
+
+            </div>
+        </section>
+        
+        <!-- Footer with Credits -->
+        <footer>
+            <div class="footer-info">
+                <p>This website is developed by <strong>Muhammad Shahal</strong>.</p>
+                <p>The chatbot is developed by <strong>Mohammed1 Ziya</strong>.</p>
+            </div>
+        </footer>
+  <!-- ScrollReveal Script for Animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    // ScrollReveal configuration for Home (Welcome Page)
+    ScrollReveal().reveal('.main-title', { delay: 500, origin: 'left', distance: '60px', duration: 2500, easing: 'ease-in-out' });
+    ScrollReveal().reveal('.content .image', { delay: 600, origin: 'bottom', distance: '60px', duration: 2500, easing: 'ease-in-out' });
+    ScrollReveal().reveal('.content .text-box', { delay: 700, origin: 'right', distance: '60px', duration: 2500, easing: 'ease-in-out' });
+
+    // ScrollReveal configuration for Tips on Health Care Section
+    ScrollReveal().reveal('.tip-card', {
+      distance: '50px',
+      duration: 1000,
+      delay: 300,
+      origin: 'bottom',
+      interval: 200,  // Delay between revealing cards
+      easing: 'ease-in-out',
+    });
+
+    // Optional: Animation for Section Title
+    ScrollReveal().reveal('.section-title', {
+      delay: 400,
+      origin: 'top',
+      distance: '30px',
+      duration: 800,
+      easing: 'ease-in-out',
+    });
+  </script>
+  <script>
+  </script></body>
+  <body>
+    <!-- Your HTML content here -->
+  
+    <script>
+      // Get all navigation links
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Function to remove active class from all links
+      function removeActiveClass() {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+        });
+      }
+      
+      // Function to add active class to the current link
+      function setActiveLink() {
+        navLinks.forEach(link => {
+          // Check if the link's href matches the current URL
+          if (window.location.hash === link.getAttribute('href')) {
+            link.classList.add('active');
+          }
+        });
+      }
+  
+      // Call the function when the page loads
+      window.addEventListener('load', setActiveLink);
+  
+      // Also call the function when the user clicks a link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          removeActiveClass();  // Remove active class from all links
+          link.classList.add('active');  // Add active class to the clicked link
+        });
+      });
+  
+      // Optionally, you can also update the navbar background on scroll
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    </script>
+    <script>
+        // Get all navigation links
+        const navlinks = document.querySelectorAll('nav a');
+        
+        // Function to remove active class from all links
+        function removeActiveClass() {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+        }
+        
+        // Function to add active class to the current link
+        function setActiveLink() {
+          navLinks.forEach(link => {
+            // Check if the link's href matches the current URL or hash
+            if (window.location.hash === link.getAttribute('href')) {
+              link.classList.add('active');
+            }
+          });
+        }
+      
+        // Call the function when the page loads
+        window.addEventListener('load', setActiveLink);
+      
+        // Also call the function when the user clicks a link
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            removeActiveClass();  // Remove active class from all links
+            link.classList.add('active');  // Add active class to the clicked link
+          });
+        });
+      
+        // Optionally, you can also update the navbar background on scroll
+        window.addEventListener('scroll', () => {
+          const header = document.querySelector('header');
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      </script>
+      <script>
+        // Get all navigation links
+        const navlink = document.querySelectorAll('nav a');
+        
+        // Function to remove active class from all links
+        function removeActiveClass() {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+          });
+        }
+        
+        // Function to add active class to the current link
+        function setActiveLink() {
+          navLinks.forEach(link => {
+            // Check if the link's href matches the current URL or hash
+            if (window.location.hash === link.getAttribute('href')) {
+              link.classList.add('active');
+            }
+          });
+        }
+      
+        // Call the function when the page loads
+        window.addEventListener('load', setActiveLink);
+      
+        // Also call the function when the user clicks a link
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            removeActiveClass();  // Remove active class from all links
+            link.classList.add('active');  // Add active class to the clicked link
+          });
+        });
+      
+        // Optionally, you can also update the navbar background on scroll
+        window.addEventListener('scroll', () => {
+          const header = document.querySelector('header');
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      </script>
+      <script>
+        // Get all FAQ cards
+        const faqCards = document.querySelectorAll('.faq-card');
+      
+        // Add event listeners to toggle the answers
+        faqCards.forEach(card => {
+          card.addEventListener('click', () => {
+            card.classList.toggle('active'); // Toggle the 'active' class to show/hide the answer
+          });
+        });
+      </script>
+      <script>
+        
+
+      </script>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    
+          </script>
+      
+      
+      
+  </body>
+  
+</html>
